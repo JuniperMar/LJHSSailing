@@ -135,6 +135,7 @@ body {
   /* font-size: var(--fs-body); */
   font-family: var(--ff-body);
   color: var(--clr-primary-400);
+  background: #f0faff;
 }
 
 .flex { /* Custom flex property */
@@ -143,19 +144,34 @@ body {
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body {
-  background: #f0faff;
+
+.container {
+  --max-width: 1000px;
+  --container-padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
 }
 
 /* Navigation Bar Styling */
 .logo {
   width: 100px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .logoTitle {
@@ -244,6 +260,7 @@ a {
 .nav .navOpenBtn,
 .nav .navCloseBtn {
   display: none;
+  margin-right: 8px;
 }
 
 /* responsive */
@@ -321,7 +338,6 @@ a {
   }
   .logo {
     width: 75px;
-    margin: 0px 10px;
   }
 }
 @media screen and (max-width: 400px) { 
@@ -389,22 +405,105 @@ a {
     font-size: var(--fs-notHuge);
   }
   .heroImage {
-    background-position: -50px;
+    background-position: -100px;
   }
 }
 @media screen and (max-width: 460px) {
   .heroText h1 {
-    font-size: var(--fs-600);
-  }
-  .heroImage {
-    background-position: -100px;
+    font-size: 40px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 375px) {
   .heroText h1 {
     font-size: var(--fs-575);
   }
   .heroImage {
     background-position: -200px;
+  }
+}
+
+/* Typewriter Effect */
+.typerLarge {
+  margin-top: 20px;
+  font-family: var(--ff-body);
+  text-align: left;
+  font-size: var(--fs-600);
+  text-decoration-line: none;
+  color: var(--clr-black);
+  font-weight: 300;
+  overflow: hidden;  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--clr-accent-1); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  /* margin: 0 auto;  Gives  scrolling effect as the typing happens, could add*/
+  letter-spacing: .10em; /* Adjust as needed */
+  animation: 
+    typing 5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+/* Responsive */
+@media screen and (max-width: 925px) {
+  .typerLarge {
+    font-size: var(--fs-550);
+    text-decoration-line: none;
+    font-weight: 300;
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--clr-accent-1); }
+}
+
+/* Typer for mobile view */
+.typerSmall {
+  display: none;
+}
+
+@media screen and (max-width: 675px) {
+    .typerLarge {
+       display:none;
+    }
+
+    .typerSmall {
+      display: block;
+      margin-top: 20px;
+      font-family: var(--ff-body);
+      text-align: left;
+      font-size: var(--fs-550);
+      text-decoration-line: none;
+      color: var(--clr-black);
+      font-weight: 300;
+      overflow: hidden;  /* Ensures the content is not revealed until the animation */
+      border-right: .15em solid var(--clr-accent-1); /* The typwriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      /* margin: 0 auto;  Gives  scrolling effect as the typing happens, could add*/
+      letter-spacing: .10em; /* Adjust as needed */
+      animation: 
+        typing 5s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 505px) {
+  .typerSmall {
+    font-size: var(--fs-400);
+    text-decoration-line: none;
+    font-weight: 300;
+  }
+}
+@media screen and (max-width: 335px) {
+  .typerSmall {
+    font-size: var(--fs-300);
+    text-decoration-line: none;
+    font-weight: 300;
   }
 }

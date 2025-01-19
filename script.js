@@ -1,3 +1,4 @@
+// Navigation Bar Functionality
 const nav = document.querySelector(".nav"),
   searchIcon = document.querySelector("#searchIcon"),
   navOpenBtn = document.querySelector(".navOpenBtn"),
