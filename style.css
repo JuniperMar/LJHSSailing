@@ -1,7 +1,10 @@
 /* Google Fonts - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-/* Google Fonts - Open Sans and Unifraktur */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=UnifrakturCook:wght@700&display=swap');
+/* Google Fonts - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Google Fonts - UnifrakturMaguntia */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 
 :root {
   --clr-accent-1: hsl(355, 74%, 49%);
@@ -14,6 +17,7 @@
 
   --ff-primary: "Poppins", sans-serif;
   --ff-title: "Open Sans", serif;
+  --ff-special: "UnifrakturMaguntia", serif;
 
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-primary);
@@ -32,6 +36,10 @@
   --fs-550: 25px; 
   --fs-575: 28px;
   --fs-600: 35px;
+  --fs-650: 50px;
+  --fs-700: 70px;
+  --fs-800: 80px;
+  --fs-900: 100px;
 
   /* variable: large screen text sizes per text type */
   --fs-body: var(--fs-400);
@@ -39,6 +47,10 @@
   --fs-secondary-heading: var(--fs-500);
   --fs-nav: var(--fs-450);
   --fs-button: var(--fs-400);
+  --fs-humongous: var(--fs-900);
+  --fs-huge: var(--fs-800);
+  --fs-lessHuge: var(--fs-700);
+  --fs-notHuge: var(--fs-650);
 }
 
 /* variable: text styling for smaller screen sizes */
@@ -151,11 +163,14 @@ body {
   align-items: center;
 }
 
-.nav {
+header {
   position: fixed;
+  z-index: 1;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
+}
+.nav {
   padding: 15px 200px;
   background: var(--clr-accent-1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -331,3 +346,65 @@ a {
 }
 
 /* Hero Banner Section */
+.hero {
+  position: relative;
+  color: var(--clr-white);
+}
+
+.heroImage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.png");
+  height: 100vh;
+  background-size: cover;
+  background-position: bottom; /* which part of the image it shows, opposite of where it crops from*/
+  width: 100%;
+  display: block;
+}
+
+.heroText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heroText h1 {
+  font-family: var(--ff-special);
+  font-size: var(--fs-humongous);
+  overflow: hidden;
+  white-space: nowrap;
+}
+@media screen and (max-width: 1000px) {
+  .heroText h1 {
+    font-size: var(--fs-huge);
+  }
+}
+@media screen and (max-width: 800px) {
+  .heroText h1 {
+    font-size: var(--fs-lessHuge);
+  }
+}
+@media screen and (max-width: 650px) {
+  .heroText h1 {
+    font-size: var(--fs-notHuge);
+  }
+  .heroImage {
+    background-position: -50px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .heroText h1 {
+    font-size: var(--fs-600);
+  }
+  .heroImage {
+    background-position: -100px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .heroText h1 {
+    font-size: var(--fs-575);
+  }
+  .heroImage {
+    background-position: -200px;
+  }
+}
