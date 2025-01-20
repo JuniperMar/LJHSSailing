@@ -188,7 +188,7 @@ b {
 }
 
 /* Random styling for the actual website content */
-.normalImg {
+.radiusImg {
   border-radius: 10px;
 }
 
@@ -898,4 +898,18 @@ header {
   background-position: -15rem -5rem, 80rem -42rem;
   background-repeat: no-repeat;
   opacity: 0.1;
+}
+
+.standoutImg {
+  position: absolute;
+  float: right;
+  inset-inline-end: 1em;
+  margin-top: 0px;
+  border-radius: 10px;
+  max-height: 200px;
+}
+@media screen and (max-width: 1000px) {
+  .standoutImg {
+    display: none;
+  }
 }
