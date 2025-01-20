@@ -96,6 +96,11 @@ body {
   line-height: 1.5;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -144,6 +149,14 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+b {
+  font-weight: var(--fw-bold);
+}
+
 .container {
   --max-width: 1000px;
   --container-padding: 1rem;
@@ -165,6 +178,10 @@ body {
   }
 }
 
+.verticalAlignCenter {
+  align-items: center;
+}
+
 .line {
   border: 0.75px solid #8e8e8e;
   width: 100%;
@@ -182,6 +199,10 @@ body {
 
 .centered {
   text-align: center;
+  justify-content: center;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .topPadding {
@@ -190,6 +211,14 @@ body {
 
 .bottomPadding {
   padding-bottom: 10px;
+}
+
+.topMargin {
+  margin-top: 10px;
+}
+
+.bottomMargin {
+  margin-bottom: 10px;
 }
 
 .link {
@@ -207,18 +236,25 @@ body {
   color: var(--clr-accent-1);
 }
 
-.button {
+.leftButton {
   margin: 20px 10px;
+}
+.centerButton {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.button {
   padding: 15px 30px;
   text-align: center;
   transition: 0.5s;
   background-size: 200% auto;
-  color: var(--clr-white);
   border-radius: 10px;
   display: block;
   border: 0px;
   font-weight: 700;
   box-shadow: 0px 0px 14px -7px var(--clr-accent-1);
+  color: var(--clr-white);
   background-image: linear-gradient(45deg, var(--clr-accent-1) 0%, var(--clr-accent-2)  51%, var(--clr-accent-1)  100%);
   cursor: pointer;
   user-select: none;
@@ -235,6 +271,18 @@ body {
 
 .button:active {
   transform: scale(0.95);
+}
+
+.button[data-type="inverted"] {
+  background-image: var(--clr-white);
+}
+
+.inverted {
+  color: var(--clr-accent-1);
+}
+
+.whiteText {
+  color: var(--clr-white);
 }
 
 /* Mobile general styling */
@@ -287,7 +335,7 @@ header {
 .nav {
   justify-content: space-between;
 }
-a {
+.nav a {
   color: var(--clr-white);
   text-decoration: none;
 }
@@ -465,7 +513,7 @@ a {
 
 .heroText {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -792,4 +840,62 @@ a {
     align-items: center;
     border-radius: 50%;
   }
+}
+
+/* Standout Banner */
+.standout {
+  width: 100%;
+  background-color: var(--clr-accent-1);
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+  padding: 75px 20px;
+  overflow: show;
+}
+
+@media (min-width: 50em) {
+  .standout {
+    text-align: left;
+    padding: 75px 0px 75px 50px;
+  }
+}
+
+@media (min-width: 55em) {
+  .standout {
+    padding: 75px 0px 75px 125px;
+  }
+}
+
+.standout::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url("images/other/bg-tablet-pattern.svg"),
+    url("images/bg-tablet-pattern.svg");
+  background-position: -15rem -5rem, 80rem -42rem;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+
+.leftStandout {
+  width: 100%;
+  background-color: var(--clr-accent-1);
+  position: relative;
+  isolation: isolate;
+  text-align: left;
+  padding: 75px 0px 75px 125px;
+  overflow: show;
+}
+
+.leftStandout::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url("images/other/bg-tablet-pattern.svg"),
+    url("images/bg-tablet-pattern.svg");
+  background-position: -15rem -5rem, 80rem -42rem;
+  background-repeat: no-repeat;
+  opacity: 0.1;
 }
