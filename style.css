@@ -29,7 +29,6 @@
   --fw-bold: 700;
 
   /* base font sizes */
-  --fs-200: 12px;
   --fs-300: 14px;
   --fs-400: 16px;
   --fs-450: 18px;
@@ -878,13 +877,25 @@ header {
   opacity: 0.1;
 }
 
+.leftStandoutContainer {
+  --max-width: 1300px;
+  --container-padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 60em) {
+  .leftStandoutContainer {
+    --container-padding: 4rem;
+  }
+}
+
 .leftStandout {
   width: 100%;
   background-color: var(--clr-accent-1);
   position: relative;
   isolation: isolate;
-  text-align: left;
-  padding: 75px 0px 75px 125px;
   overflow: show;
 }
 
@@ -900,16 +911,93 @@ header {
   opacity: 0.1;
 }
 
-.standoutImg {
-  position: absolute;
-  float: right;
-  inset-inline-end: 1em;
-  margin-top: 0px;
-  border-radius: 10px;
-  max-height: 200px;
+.leftStandoutImg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-@media screen and (max-width: 1000px) {
-  .standoutImg {
+
+.leftStandoutImg img {
+  border-radius: 1em;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 20px 0px;
+}
+
+@media screen and (max-width: 56em) {
+  .leftStandoutImg {
     display: none;
+  }
+  .leftStandout {
+    padding: 75px 0px 75px 100px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 41em) {
+  .leftStandoutImg {
+    display: none;
+  }
+  .leftStandout {
+    padding: 75px 0px;
+    text-align: center;
+  }
+}
+
+/* Google Map */
+.googleMap {
+  max-width: 100%;
+  display: block;
+}
+
+.notEvenColumns {
+  justify-content: space-between; /* Makes the entire container centered */
+  display: flex;
+}
+
+.address {
+  color: var(--clr-black);
+  font-size: var(--fs-550);
+  padding: auto 0;
+  margin: auto 0;
+}
+
+@media (max-width: 70em) {
+  .address {
+    font-size: var(--fs-500);
+  }
+}
+@media (max-width: 55em) {
+  .address {
+    font-size: var(--fs-400);
+  }
+}
+@media (max-width: 52em) {
+  .googleMap {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 38em) {
+  .notEvenColumns {
+    display: grid;
+    gap: 1rem;
+  }
+  .googleMap {
+    max-height: 52vh;
+    max-width: 100%;
+  }
+  .address {
+    font-size: var(--fs-400);
+    padding-bottom: 10px;
+  }
+  .centeredWhenSmall {
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
