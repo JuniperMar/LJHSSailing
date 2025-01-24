@@ -337,7 +337,6 @@ header {
   display: flex;
   align-items: center;
 }
-
 .nav {
   justify-content: space-between;
 }
