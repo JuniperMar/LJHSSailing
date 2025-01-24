@@ -508,7 +508,7 @@ header {
 }
 
 .heroImage {
-  background-image: url("./images/hero.png");
+  background-image: url("./images/other/hero.png");
 
   /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/other/hero.png");*/
   height: 100vh;
