@@ -1021,12 +1021,12 @@ header {
 }
 
 .footer-section {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-section h3 {
   font-size: var(--fs-500);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: var(--fw-bold);
 }
 
@@ -1067,16 +1067,6 @@ header {
 
 .social-icon:hover {
   opacity: 0.8;
-}
-
-.footer-button {
-  background: var(--clr-white);
-  color: var(--clr-accent-1);
-  margin: 0;
-}
-
-.footer-button:hover {
-  opacity: 0.9;
 }
 
 .footer-bottom {
