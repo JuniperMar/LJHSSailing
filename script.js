@@ -22,7 +22,7 @@ navCloseBtn.addEventListener("click", () => {
   nav.classList.remove("openNav");
 });
 
-// Super fun energy slider
+// Super fun image slider
 let next = document.querySelector(".next");
 let prev = document.querySelector(".prev");
 let slider = document.querySelector(".slider");
