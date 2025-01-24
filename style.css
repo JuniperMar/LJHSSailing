@@ -9,6 +9,7 @@
 :root {
   --clr-accent-1: hsl(355, 74%, 49%);
   --clr-accent-2: hsl(355, 88%, 60%);
+  --clr-accent-25: hsl(355, 88%, 65%);
   --clr-accent-3: hsl(355, 88%, 90%);
   --clr-accent-4: hsl(355, 100%, 96%);
 
@@ -146,6 +147,11 @@ body {
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  background-color: var(--clr-accent-25);
+  color: var(--white-color);
 }
 
 a {
