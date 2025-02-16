@@ -375,6 +375,7 @@ header {
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
+  list-style: none;
 }
 
 .dropdown:hover .dropdown-menu {
