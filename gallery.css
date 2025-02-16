@@ -41,20 +41,6 @@
   box-shadow: 0 0 5px rgba(217, 32, 47, 0.3);
 }
 
-.filters select option {
-  padding: 12px 24px;
-  background-color: var(--clr-white);
-  color: var(--clr-accent-1);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.filters select option:checked,
-.filters select option:hover {
-  background-color: var(--clr-accent-4);
-  color: var(--clr-accent-2);
-}
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
