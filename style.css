@@ -309,9 +309,10 @@ b {
 }
 
 /* Navigation Bar Styling */
-.logo {
-  width: 100px;
-  margin-right: 10px;
+#logo {
+  width: 100px; /* 50px */
+  margin-right: 20px;
+  transition: 0.4s;
 }
 
 .logoTitle {

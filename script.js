@@ -1,3 +1,14 @@
+// Shrink navbar on scroll
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("logo").style.width = "50px";
+  } else {
+    document.getElementById("logo").style.width = "100px";
+  }
+}
+
 // Super fun image slider
 let next = document.querySelector(".next");
 let prev = document.querySelector(".prev");
