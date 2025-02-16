@@ -357,6 +357,70 @@ header {
 .nav .nav-links a {
   transition: all 0.2s linear;
 }
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--clr-accent-1);
+  min-width: 180px;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.dropdown-trigger .uil-angle-down {
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 900px) {
+  .dropdown-menu {
+    position: static;
+    background: transparent;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    padding-left: 2rem;
+    display: none;
+  }
+  
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-trigger .uil-angle-down {
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown.active .uil-angle-down {
+    transform: rotate(180deg);
+  }
+}
 .nav.openSearch .nav-links a {
   opacity: 0;
   pointer-events: none;
