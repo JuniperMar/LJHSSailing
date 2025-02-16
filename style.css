@@ -363,9 +363,9 @@ header {
 }
 
 .dropdown-menu {
-  position: fixed;
-  top: 80px;
-  left: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
   background: var(--clr-accent-1);
   min-width: 180px;
   padding: 0.5rem 0;
