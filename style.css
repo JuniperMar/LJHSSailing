@@ -9,7 +9,7 @@
 :root {
   --clr-accent-1: hsl(355, 74%, 49%);
   --clr-accent-2: hsl(355, 88%, 60%);
-  --clr-accent-25: hsl(355, 88%, 65%);
+  --clr-accent-25: hsl(355, 88%, 75%);
   --clr-accent-3: hsl(355, 88%, 90%);
   --clr-accent-4: hsl(355, 100%, 96%);
 
@@ -195,6 +195,11 @@ b {
 /* Random styling for the actual website content */
 .radiusImg {
   border-radius: 10px;
+}
+
+h3 {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
 }
 
 .heading {

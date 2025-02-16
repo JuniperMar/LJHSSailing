@@ -1,0 +1,24 @@
+.informationHeroImg {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)), 
+    url("images/roster/groupPhoto.jpeg");
+  height: 75vh;
+  background-position: 0px -225px;
+  background-size: cover;
+  width: 100%;
+  display: block;
+}
+
+.leftMargin {
+  margin-left: 50px;
+}
+
+ol li {
+  margin-top: 10px;
+}
+
+ul li {
+  margin-top: 10px;
+}
