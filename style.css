@@ -167,7 +167,7 @@ b {
   --max-width: 1000px;
   --container-padding: 1rem;
   padding-top: 20px;
-
+  
   width: min(var(--max-width), 100% - (var(--container-padding) * 2));
   margin-inline: auto;
 }
@@ -1188,18 +1188,5 @@ header {
 
   .footer-button {
     margin: 0 auto;
-    background-image: linear-gradient(45deg, var(--clr-accent-1) 0%, var(--clr-accent-2)  51%, var(--clr-accent-1)  100%);
-    background-size: 200% auto;
-    transition: 0.5s;
-  }
-
-  .footer-button:hover {
-    background-position: right center;
-    background-image: linear-gradient(45deg, var(--clr-accent-1) 0%, var(--clr-accent-2)  51%, var(--clr-accent-1)  100%);
-    color: var(--clr-white);
-  }
-
-  .footer-button:hover a {
-    color: var(--clr-white);
   }
 }
