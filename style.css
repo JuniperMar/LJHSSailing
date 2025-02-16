@@ -136,7 +136,7 @@ body {
   /* font-size: var(--fs-body); */
   font-family: var(--ff-body);
   color: var(--clr-primary-400);
-  background: #f0faff;
+  background: var(--clr-white);
 }
 
 .flex { /* Custom flex property */
@@ -321,7 +321,7 @@ b {
 
 header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   top: 0;
   left: 0;
@@ -632,16 +632,6 @@ header {
   .heroImage {
     background-position: -200px;
   }
-}
-
-.rosterHeroImg {
-  background-image:
-    linear-gradient(
-      rgba(0, 0, 0, 0.3), 
-      rgba(0, 0, 0, 0.3)), 
-    url("images/roster/groupPhoto.jpeg");
-  height: 75vh;
-  background-position: 0px -225px;
 }
 
 .halfHeroText {

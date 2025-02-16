@@ -1,0 +1,105 @@
+.rosterHeroImg {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)), 
+    url("images/roster/groupPhoto.jpeg");
+  height: 75vh;
+  background-position: 0px -225px;
+  background-size: cover;
+  width: 100%;
+  display: block;
+}
+
+/* moving cards */
+.rosterContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: warp;
+  padding-top: 80px;
+  padding-bottom: 0px;
+  z-index: 1;
+}
+
+.rosterContainer .card {
+  position: relative;
+  max-width: 300px;
+  height: 215px;  
+  background-color: var(--clr-white);
+  margin: 20px 30px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: 0.3s ease-in-out;
+  border-radius: 15px;
+}
+.rosterContainer .card:hover {
+  height: 320px; /* Height of the white background when expanded */
+}
+
+.rosterContainer .card .image {
+  position: relative;
+  top: -50%;
+  align-self: center;
+  z-index: 1;
+}
+
+.rosterContainer .card .image img {
+  max-width: 100%;
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.rosterContainer .card .content {
+  position: relative;
+  top: -160px;
+  padding: 10px 15px;
+  color: var(--clr-black);
+  text-align: left;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out; 
+}
+
+.rosterContainer .card:hover .content {
+   margin-top: 30px;
+   visibility: visible;
+   opacity: 1;
+   transition-delay: 0.2s;
+}
+
+h3 {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+}
+
+.coach {
+  width: 350px;
+  height: 400px;
+  margin-right: 20px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.parentCoordinator {
+  width: 350px;
+  height: 400px;
+  margin-right: 0px;
+  margin-left: 20px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.rosterText {
+  max-width: 60%;
+}
+
+.specialRosterContainer {
+  justify-content: space-between;
+}
