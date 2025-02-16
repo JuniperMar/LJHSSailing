@@ -32,6 +32,8 @@
   font-family: 'Unicons';
   position: absolute;
   right: 15px;
+  color: var(--clr-accent-1);
+  font-size: 1.2em;
   transition: transform 0.3s ease;
 }
 
