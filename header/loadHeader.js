@@ -28,14 +28,5 @@ document.addEventListener('DOMContentLoaded', function() {
       navCloseBtn.addEventListener("click", () => {
         nav.classList.remove("openNav");
       });
-
-      // Handle mobile dropdown
-      document.addEventListener('click', (e) => {
-        if (e.target.closest('.dropdown-trigger')) {
-          e.preventDefault();
-          const dropdown = e.target.closest('.dropdown');
-          dropdown.classList.toggle('active');
-        }
-      });
     });
 });

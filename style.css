@@ -404,22 +404,24 @@ header {
     left: 100%;
     top: 0;
     background: var(--clr-accent-1);
-    opacity: 1;
-    visibility: visible;
-    transform: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
     min-width: 180px;
-    display: none;
     margin-left: 10px;
+    transition: all 0.3s ease;
   }
   
   .dropdown {
     position: relative;
   }
 
-  .dropdown.active .dropdown-menu {
-    display: block;
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
   }
   
   .dropdown-trigger .uil-angle-down {
