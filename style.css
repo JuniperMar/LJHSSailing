@@ -580,7 +580,7 @@ header {
     linear-gradient(
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)), 
-    url("./images/other/hero.png");
+    url("images/other/hero.png");
   height: 100vh;
   background-size: cover;
   background-position: bottom; /* which part of the image it shows, opposite of where it crops from*/
@@ -632,6 +632,24 @@ header {
   .heroImage {
     background-position: -200px;
   }
+}
+
+.rosterHeroImg {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)), 
+    url("images/roster/groupPhoto.jpeg");
+  height: 75vh;
+  background-position: 0px -225px;
+}
+
+.halfHeroText {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  text-align: center;
 }
 
 /* Typewriter Effect */
