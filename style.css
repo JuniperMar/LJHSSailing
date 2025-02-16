@@ -309,6 +309,9 @@ h3 {
   p {
     text-align: center;
   }
+  h3 {
+    text-align: center;
+  }
   .button {
     justify-content: center;
     align-self: center;
