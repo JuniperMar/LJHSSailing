@@ -396,6 +396,12 @@ header {
 .dropdown-trigger .uil-angle-down {
   font-size: 1.2em;
   vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .uil-angle-down {
+  transform: rotate(180deg);
 }
 
 @media screen and (max-width: 900px) {
