@@ -1,4 +1,4 @@
-.informationHeroImg {
+.joinHeroImg {
   background-image:
     linear-gradient(
       rgba(0, 0, 0, 0.3), 
@@ -11,14 +11,9 @@
   display: block;
 }
 
-.lotsOfLeftMargin {
-  margin-left: 50px;
-}
-
-ol li {
-  margin-top: 10px;
-}
-
-ul li {
-  margin-top: 10px;
+.googleForm {
+  box-shadow: 0 0 50px rgba(217, 32, 47, 0.3);
+  border-radius: 15px;
+  padding-top: 20px;
+  margin-top: 50px;
 }

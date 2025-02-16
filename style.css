@@ -88,6 +88,7 @@ html:focus-within {
 html,
 body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
@@ -200,6 +201,10 @@ b {
 h3 {
   font-size: var(--fs-500);
   font-weight: var(--fw-bold);
+}
+
+.smallLeftMargin {
+  margin-left: 10px;
 }
 
 .heading {
@@ -353,6 +358,7 @@ header {
 .nav a:hover {
   opacity: 0.8;
 }
+
 .nav .navTitle {
   font-family: var(--ff-title);
   font-size: var(--fs-600);
