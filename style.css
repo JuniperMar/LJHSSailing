@@ -290,7 +290,7 @@ b {
   color: var(--clr-white);
 }
 /* Mobile general styling */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .heading {
     font-size: var(--fs-550);
     font-weight: var(--fw-bold);
