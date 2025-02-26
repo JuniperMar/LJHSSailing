@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="theme-color" content="hsl(355, 74%, 49%)">
   <title>LJHS Sailing - Gallery</title>
   <link rel="shortcut icon" type="image/x-icon" href="images/other/logo.png" />
   <link href="style.css" rel="stylesheet" type="text/css" />
@@ -18,68 +17,84 @@
   <script src="header/loadHeader.js"></script>
 
   <main>
-    <div class="galleryContainer">
-      <h1 class="heading centered">Photo Gallery</h1>
 
-      <div class="filters">
-        <select id="eventFilter">
-          <option value="all">All Events</option>
-          <option value="practice">Practices</option>
-          <option value="seaOtter">Sea Otter PCISA #1</option>
-          <option value="roseBowl">Rose Bowl PCISA #3</option>
-          <option value="soCal4">SoCal #4</option>
-        </select>
-
-        <select id="yearFilter">
-          <option value="all">All Years</option>
-          <option value="202425">2024-25</option>
-        </select>
-      </div>
-
-      <div class="gallery">
-
-        <div class="galleryItem" data-event="roseBowl" data-year="202425">
-          <img src="images/sailingPhotos/cold.png" alt="Sailing in cold weather">
-          <div class="overlay">
-            <p class="caption">Rose Bowl PCISA #4</p>
-            <p class="details">Maggie & Maddie | Jan 4, 2025</p>
-          </div>
-        </div>
-
-        <div class="galleryItem" data-event="practice" data-year="2024">
-          <img src="images/sailingPhotos/launching.png" alt="Launching boats">
-          <div class="overlay">
-            <p class="caption">Rose Bowl PCISA #4</p>
-            <p class="details">Jan 4, 2025</p>
-          </div>
-        </div>
-
-        <div class="galleryItem" data-event="regatta" data-year="2024">
-          <img src="images/sailingPhotos/start.png" alt="Race start">
-          <div class="overlay">
-            <p class="caption">Rose Bowl PCISA #4</p>
-            <p class="details">Malia & Owen | Jan 4, 2025</p>
-          </div>
-        </div>
-
-        <div class="galleryItem" data-event="practice" data-year="2023">
-          <img src="images/sailingPhotos/tillerSwap.png" alt="Tiller exchange">
-          <div class="overlay">
-            <p class="caption">Rose Bowl PCISA #4</p>
-            <p class="details">Trevor & Katie | Jan 4, 2025</p>
-          </div>
-        </div>
-
-        <div class="galleryItem" data-event="regatta" data-year="2023">
-          <img src="images/sailingPhotos/vastDownwind.png" alt="Downwind sailing">
-          <div class="overlay">
-            <p class="caption">Rose Bowl PCISA #4</p>
-            <p class="details">Jan 4, 2025</p>
-          </div>
-        </div>
-
+    <div id="passwordOverlay" class="passwordOverlay">
+      <div class="passwordContainer">
+        <h1 class="heading centered">Enter Password</h1>
+        <input type="password" id="passwordInput" placeholder="Enter password to access this page">
+        <button class="button centered" onclick="checkPassword()">Submit</button>
+        <p id="passwordError" class="passwordError"></p>
       </div>
     </div>
+
+    <div id="passwordGhost" class="passwordGhost">
+      <div class="galleryContainer">
+        <h1 class="heading centered">Photo Gallery</h1>
+
+        <div class="filters">
+          <select id="eventFilter">
+            <option value="all">All Events</option>
+            <option value="practice">Practices</option>
+            <option value="seaOtter">Sea Otter PCISA #1</option>
+            <option value="roseBowl">Rose Bowl PCISA #3</option>
+            <option value="soCal4">SoCal #4</option>
+          </select>
+
+          <select id="yearFilter">
+            <option value="all">All Years</option>
+            <option value="202425">2024-25</option>
+          </select>
+        </div>
+
+        <div class="gallery">
+
+          <div class="galleryItem" data-event="roseBowl" data-year="202425">
+            <img src="images/sailingPhotos/cold.png" alt="Sailing in cold weather">
+            <div class="overlay">
+              <p class="caption">Rose Bowl PCISA #4</p>
+              <p class="details">Maggie & Maddie | Jan 4, 2025</p>
+            </div>
+          </div>
+
+          <div class="galleryItem" data-event="practice" data-year="2024">
+            <img src="images/sailingPhotos/launching.png" alt="Launching boats">
+            <div class="overlay">
+              <p class="caption">Rose Bowl PCISA #4</p>
+              <p class="details">Jan 4, 2025</p>
+            </div>
+          </div>
+
+          <div class="galleryItem" data-event="regatta" data-year="2024">
+            <img src="images/sailingPhotos/start.png" alt="Race start">
+            <div class="overlay">
+              <p class="caption">Rose Bowl PCISA #4</p>
+              <p class="details">Malia & Owen | Jan 4, 2025</p>
+            </div>
+          </div>
+
+          <div class="galleryItem" data-event="practice" data-year="2023">
+            <img src="images/sailingPhotos/tillerSwap.png" alt="Tiller exchange">
+            <div class="overlay">
+              <p class="caption">Rose Bowl PCISA #4</p>
+              <p class="details">Trevor & Katie | Jan 4, 2025</p>
+            </div>
+          </div>
+
+          <div class="galleryItem" data-event="regatta" data-year="2023">
+            <img src="images/sailingPhotos/vastDownwind.png" alt="Downwind sailing">
+            <div class="overlay">
+              <p class="caption">Rose Bowl PCISA #4</p>
+              <p class="details">Jan 4, 2025</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <script src="footer/loadFooter.js"></script>
+
+    </div>
+    
   </main>
 
   <script src="footer/loadFooter.js"></script>

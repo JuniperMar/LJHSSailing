@@ -1,3 +1,20 @@
+function checkPassword() {
+  const password = document.getElementById('passwordInput').value;
+  const overlay = document.getElementById('passwordOverlay');
+  const ghost = document.getElementById('passwordGhost');
+  const errorElement = document.getElementById('passwordError');
+
+  if (password == "ljhsphotos") {
+    overlay.style.display = 'none';
+    ghost.style.display = 'inline';
+  } else {
+    errorElement.textContent = 'Incorrect password. Please try again.';
+    setTimeout(() => {
+      errorElement.textContent = '';
+    }, 3000);
+  }
+}
+
 const eventFilter = document.getElementById('eventFilter');
 const yearFilter = document.getElementById('yearFilter');
 const galleryItems = document.querySelectorAll('.galleryItem');
