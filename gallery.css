@@ -144,6 +144,17 @@
   width: 25vw;
 }
 
+@media (max-width: 768px) {
+  .passwordContainer input {
+    padding: 5px;
+    margin: 25px 0;
+    border: 2px solid var(--clr-accent-1);
+    border-radius: 5px;
+    width: 35vw;
+    font-size: var(--fs-300);
+  }
+}
+
 .passwordContainer input:hover {
   transition: background-color 0.3s;
   cursor: pointer;

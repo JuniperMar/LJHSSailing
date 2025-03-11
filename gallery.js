@@ -1,3 +1,4 @@
+// Locked page access
 function checkPassword() {
   const password = document.getElementById('passwordInput').value;
   const overlay = document.getElementById('passwordOverlay');
@@ -15,6 +16,7 @@ function checkPassword() {
   }
 }
 
+// Gallery Filter
 const eventFilter = document.getElementById('eventFilter');
 const yearFilter = document.getElementById('yearFilter');
 const galleryItems = document.querySelectorAll('.galleryItem');
