@@ -592,12 +592,17 @@ header {
 .heroImage {
   background-image: 
     linear-gradient(
+      rgba(0, 0, 0, 0.15), 
+      rgba(0, 0, 0, 0.15)), 
+    url("images/other/hero1.png");
+  /*background-image: 
+    linear-gradient(
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)), 
-    url("images/other/hero.png");
+    url("images/other/hero.png");*/
   height: 100vh;
   background-size: cover;
-  background-position: bottom; /* which part of the image it shows, opposite of where it crops from*/
+  background-position: top; /* which part of the image it shows, opposite of where it crops from*/
   width: 100%;
   display: block;
 }

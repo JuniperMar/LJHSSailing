@@ -1,14 +1,14 @@
 .rosterHeroImg {
+  width: 100%;
   background-image:
     linear-gradient(
       rgba(0, 0, 0, 0.3), 
       rgba(0, 0, 0, 0.3)), 
     url("images/roster/groupPhoto.jpeg");
   height: 75vh;
-  background-position: 0px -225px;
   background-size: cover;
-  width: 100%;
-  display: block;
+  background-repeat: no-repeat;
+  background-position: center 40%;
 }
 
 /* moving cards */
