@@ -1174,8 +1174,10 @@ header {
   opacity: 0.8;
 }
 
-.footer-bottom {
+.footerBottom {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1.5rem 0;
   margin-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
