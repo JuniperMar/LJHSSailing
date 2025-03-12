@@ -13,23 +13,24 @@
 
 /* moving cards */
 .rosterContainer {
-  position: relative;
-  display: flex;
+  /*position: relative;*/
   align-items: center;
   justify-content: center;
-  flex-wrap: warp;
-  padding-top: 80px;
-  padding-bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px 10px;
   z-index: 1;
 }
 
 .rosterContainer .card {
   position: relative;
-  max-width: 300px;
-  height: 215px;  
+  flex-basis: 22.5%;
+  min-width: 300px;
+  height: 215px;
   background-color: var(--clr-white);
-  margin: 20px 30px;
-  padding: 20px 15px;
+  margin: 125px 30px 20px 30px;
+  padding: 20px 8px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 5px 20px rgba(0,0,0,0.5);
@@ -72,6 +73,17 @@
    visibility: visible;
    opacity: 1;
    transition-delay: 0.2s;
+}
+
+@media screen and (max-width: 750px) {
+  .rosterContainer {
+    scale: 0.9;
+    transition: 0.3s ease-in-out; 
+    margin: 0px 5px;
+  }
+  .rosterContainer .card {
+    margin: 125px 20px 20px 20px;
+  }
 }
 
 h3 {

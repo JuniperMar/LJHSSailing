@@ -1,3 +1,22 @@
+// Alert of website construction
+function showAlert() {
+  const currentTime = new Date().getTime();
+  const lastDismissed = localStorage.getItem('lastDismissed');
+  if (!lastDismissed || (currentTime - lastDismissed) >= 24 * 60 * 60 * 1000) {
+    alert("This website is currently under construction. Please contact Malia if you run into any issues. Thanks!");
+  }
+}
+
+function dismissAlert() {
+  const currentTime = new Date().getTime();
+  localStorage.setItem('lastDismissed', currentTime);
+}
+
+window.onload = function() {
+  showAlert();
+  setTimeout(dismissAlert, 0);
+};
+
 // Shrink navbar on scroll
 window.onscroll = function() {scrollFunction()};
 
