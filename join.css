@@ -1,20 +1,30 @@
 .joinHeroImg {
+  width: 100%;
   background-image:
     linear-gradient(
       rgba(0, 0, 0, 0.3), 
       rgba(0, 0, 0, 0.3)), 
-    url("images/roster/groupPhoto.jpeg");
+    url("images/roster/groupPhoto2.JPG");
   height: 75vh;
-  background-position: 0px -225px;
   background-size: cover;
-  width: 100%;
-  display: block;
+  background-repeat: no-repeat;
+  background-position: 0% 10%;
 }
 
 .googleForm {
   box-shadow: 0 0 50px rgba(217, 32, 47, 0.3);
   border-radius: 15px;
   padding-top: 20px;
-  margin-top: 50px;
-  margin-bottom: 25px;
+  margin: 50px 20px 25px 20px;
+  overflow: hidden;
+  width: 700px;
+  max-width: 80%;
+}
+
+@media screen and (max-width: 750px) {
+  .googleForm {
+    max-width: 90%;
+    box-shadow: 0 0 25px rgba(217, 32, 47, 0.3);
+    transition: 0.3s ease-in-out; 
+  }
 }
