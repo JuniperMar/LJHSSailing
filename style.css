@@ -1183,21 +1183,21 @@ header {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-button {
+.invertedButton {
   background-color: var(--clr-white);
 }
 
-.footer-button a {
+.invertedButton a {
   color: var(--clr-accent-1);
 }
 
-.footer-button:hover{
+.invertedButton:hover{
   background-color: var(--clr-accent-2);
   transition-duration: 1s ease 1s;
   box-shadow: 0 0 25px rgb(255, 255, 255, 0.3);
 }
 
-.footer-button a:hover {
+.invertedButton a:hover {
   color: var(--clr-white);
 }
 
@@ -1211,7 +1211,7 @@ header {
     justify-content: center;
   }
 
-  .footer-button {
+  .invertedButton {
     margin: 0 auto;
   }
 }
