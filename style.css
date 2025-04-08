@@ -189,11 +189,11 @@ b {
     grid-template-columns: 1fr;
   }
   
-  .evenColumns > *:nth-child(2n) {
+  .evenColumns > div:has(img) {
     order: 2;
   }
   
-  .evenColumns > *:nth-child(2n-1) {
+  .evenColumns > div:not(:has(img)) {
     order: 1;
   }
 }
