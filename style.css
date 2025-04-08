@@ -184,6 +184,20 @@ b {
   }
 }
 
+@media (max-width: 50em) {
+  .evenColumns {
+    grid-template-columns: 1fr;
+  }
+  
+  .evenColumns > *:nth-child(2n) {
+    order: 2;
+  }
+  
+  .evenColumns > *:nth-child(2n-1) {
+    order: 1;
+  }
+}
+
 .verticalAlignCenter {
   align-items: center;
 }
