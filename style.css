@@ -193,7 +193,7 @@ b {
     order: 1;
   }
   
-  .evenColumns > *:nth-child(1):last-child {
+  .evenColumns > *:nth-child(4):last-child {
     order: 2;
   }
   
@@ -201,7 +201,7 @@ b {
     order: 3;
   }
   
-  .evenColumns > *:nth-child(4):last-child {
+  .evenColumns > *:nth-child(1):last-child {
     order: 4;
   }
 }
