@@ -198,11 +198,11 @@ b {
   }
   
   .evenColumns > *:nth-child(3):last-child {
-    order: 4;
+    order: 3;
   }
   
   .evenColumns > *:nth-child(4):last-child {
-    order: 3;
+    order: 4;
   }
 }
 
