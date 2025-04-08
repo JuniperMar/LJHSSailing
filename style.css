@@ -184,6 +184,28 @@ b {
   }
 }
 
+@media (max-width: 50em) {
+  .evenColumns {
+    grid-template-columns: 1fr;
+  }
+  
+  .evenColumns > *:nth-child(2):last-child {
+    order: 1;
+  }
+  
+  .evenColumns > *:nth-child(1):last-child {
+    order: 2;
+  }
+  
+  .evenColumns > *:nth-child(3):last-child {
+    order: 4;
+  }
+  
+  .evenColumns > *:nth-child(4):last-child {
+    order: 3;
+  }
+}
+
 .verticalAlignCenter {
   align-items: center;
 }
