@@ -1135,15 +1135,14 @@ header {
   margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 0.5rem;
+  gap: 2rem;
   padding: 0 1rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 1000px; /* Added max-width for better desktop centering */
+  margin: 0 auto; /* Centered the container horizontally */
 }
 
 .footerSection {
-  margin-bottom: 0;
-  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .footerSection h3 {
@@ -1179,7 +1178,7 @@ header {
   display: flex;
   gap: 1rem;
   margin-bottom: 1.5rem;
-  justify-content: center; /* Center social icons horizontally */
+  justify-content: left;
 }
 
 .socialIcon {
