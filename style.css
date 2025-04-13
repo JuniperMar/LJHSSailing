@@ -1142,12 +1142,12 @@ header {
 
 .footerSection.about {
   width: 40%;
-  margin-right: 3rem;
+  margin-right: 6rem;
 }
 
 .footerSection.links {
   width: 25%;
-  margin-right: 3rem;
+  margin-right: 1rem;
 }
 
 .footerSection.social {
