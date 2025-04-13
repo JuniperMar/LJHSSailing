@@ -1174,11 +1174,16 @@ header {
   opacity: 0.8;
 }
 
+.footerSection.social {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
 .socialIcons {
   display: flex;
   gap: 1rem;
   margin-bottom: 1.5rem;
-  justify-content: left;
 }
 
 .socialIcon {
@@ -1231,14 +1236,6 @@ header {
   .invertedButton {
     margin: 0 auto;
   }
-}
-.footerSection.social {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-@media (max-width: 768px) {
   .footerSection.social {
     align-items: center;
     text-align: center;
