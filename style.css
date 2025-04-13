@@ -1135,14 +1135,14 @@ header {
   margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
   padding: 0 1rem;
-  max-width: 1000px; /* Added max-width for better desktop centering */
-  margin: 0 auto; /* Centered the container horizontally */
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .footerSection {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 .footerSection h3 {
