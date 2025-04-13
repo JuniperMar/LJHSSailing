@@ -1239,8 +1239,16 @@ header {
 
 @media (max-width: 768px) {
   .footerContainer {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     text-align: center;
+  }
+
+  .footerSection.about,
+  .footerSection.links,
+  .footerSection.social {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
   }
 
   .socialIcons {
@@ -1250,8 +1258,13 @@ header {
   .invertedButton {
     margin: 0 auto;
   }
+  
   .footerSection.social {
     align-items: center;
     text-align: center;
+  }
+
+  .footerSection.links ul {
+    padding: 0;
   }
 }
