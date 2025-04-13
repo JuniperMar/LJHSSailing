@@ -1133,12 +1133,25 @@ header {
 .footerContainer {
   width: min(var(--max-width), 100% - (var(--container-padding) * 2));
   margin-inline: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
   padding: 0 1rem;
-  max-width: 1000px; /* Added max-width for better desktop centering */
-  margin: 0 auto; /* Centered the container horizontally */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footerSection.about {
+  width: 40%;
+  margin-right: 3rem;
+}
+
+.footerSection.links {
+  width: 25%;
+  margin-right: 3rem;
+}
+
+.footerSection.social {
+  width: 25%;
 }
 
 .footerSection {
