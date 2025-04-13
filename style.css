@@ -188,11 +188,11 @@ b {
   .evenColumns {
     grid-template-columns: 1fr;
   }
-  
+
   .evenColumns > div:has(img) {
     order: 2;
   }
-  
+
   .evenColumns > div:not(:has(img)) {
     order: 1;
   }
@@ -1137,6 +1137,8 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   padding: 0 1rem;
+  max-width: 1000px; /* Added max-width for better desktop centering */
+  margin: 0 auto; /* Centered the container horizontally */
 }
 
 .footerSection {
@@ -1176,6 +1178,7 @@ header {
   display: flex;
   gap: 1rem;
   margin-bottom: 1.5rem;
+  justify-content: center; /* Center social icons horizontally */
 }
 
 .socialIcon {
@@ -1228,4 +1231,10 @@ header {
   .invertedButton {
     margin: 0 auto;
   }
+}
+.footerSection.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
