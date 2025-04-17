@@ -1,0 +1,16 @@
+.informationHeroImg {
+  width: 100%;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)), 
+    url("images/sailingPhotos/cargoShip.JPG");
+  height: 75vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 93%;
+}
+
+p {
+  text-align: left;
+}
