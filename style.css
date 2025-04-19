@@ -1307,7 +1307,8 @@ header {
 }
 
 .tallImg {
-  height: auto;
+  height: 450px;
+  width: 100%;
   object-fit: cover;
-  max-height: 450px;
+  object-position: center;
 }
