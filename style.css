@@ -2,9 +2,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 /* Google Fonts - Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 /* Google Fonts - UnifrakturMaguntia */
+/* "UnifrakturMaguntia", cursive; */
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+/* Google Fonts - Grenze Gotisch */
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap');
+
+/* Google Fonts - Blaka Hollow */
+@import url('https://fonts.googleapis.com/css2?family=Blaka+Hollow&display=swap');
+
+/* Google Fonts - New Rocker */
+/* "New Rocker", system-ui; */
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+/* OTF Fonts - NorseBold */
+@font-face {
+    font-family: NorseBold;
+    font-weight: bold;
+    src: url("fonts/NorseBold-2Kge.otf") format("opentype");
+}
+
+/* TTF Fonts - Viking-Normal */
+@font-face {
+    font-family: Viking-Normal;
+    font-weight: bold;
+    src: url("fonts/VIKING-N.TTF") format("truetype");
+}
 
 :root {
   --clr-accent-1: hsl(355, 74%, 49%);
@@ -19,7 +43,7 @@
 
   --ff-primary: "Poppins", sans-serif;
   --ff-title: "Open Sans", serif;
-  --ff-special: "UnifrakturMaguntia", serif;
+  --ff-special: "New Rocker", system-ui;
 
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-primary);
@@ -40,7 +64,7 @@
   --fs-650: 50px;
   --fs-700: 70px;
   --fs-800: 80px;
-  --fs-900: 100px;
+  --fs-900: 120px;
 
   /* variable: large screen text sizes per text type */
   --fs-body: var(--fs-400);
@@ -334,6 +358,11 @@ h3 {
   }
 }
 
+.sameLine {
+  display: inline-flex;
+  gap: 30px;
+}
+
 /* Navigation Bar Styling */
 #logo {
   width: 100px; /* 50px */
@@ -604,16 +633,16 @@ header {
 }
 
 .heroImage {
-  background-image: 
+  /*background-image: 
     linear-gradient(
       rgba(0, 0, 0, 0.15), 
       rgba(0, 0, 0, 0.15)), 
-    url("images/other/hero1.png");
-  /*background-image: 
+    url("images/other/hero1.png");*/
+  background-image: 
     linear-gradient(
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)), 
-    url("images/other/hero.png");*/
+    url("images/other/hero.png");
   height: 100vh;
   background-size: cover;
   background-position: top; /* which part of the image it shows, opposite of where it crops from*/
@@ -635,7 +664,7 @@ header {
   overflow: hidden;
   white-space: nowrap;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .heroText h1 {
     font-size: var(--fs-huge);
   }
@@ -657,6 +686,10 @@ header {
   .heroText h1 {
     font-size: 40px;
   }
+  .sameLine {
+    display: inline-flex;
+    gap: 20px;
+  }
 }
 @media screen and (max-width: 375px) {
   .heroText h1 {
@@ -664,6 +697,10 @@ header {
   }
   .heroImage {
     background-position: -200px;
+  }
+  .sameLine {
+    display: block;
+    gap: 20px;
   }
 }
 
