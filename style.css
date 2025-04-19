@@ -1307,5 +1307,22 @@ header {
 }
 
 .tallImg {
-  min-height: 200px;
+  height: 100%;
+  object-fit: cover;
+  min-height: 300px;
+}
+
+.evenColumns {
+  display: flex;
+  gap: 2em;
+}
+
+@media screen and (max-width: 500px) {
+  .evenColumns {
+    flex-direction: column;
+  }
+  
+  .tallImg {
+    min-height: 200px;
+  }
 }
