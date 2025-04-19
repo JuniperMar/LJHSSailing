@@ -1305,3 +1305,7 @@ header {
     padding: 0;
   }
 }
+
+.tallImg {
+  min-height: 200px;
+}
