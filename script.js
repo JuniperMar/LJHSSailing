@@ -1,4 +1,5 @@
 // Alert of website construction
+/*
 function showAlert() {
   const currentTime = new Date().getTime();
   const lastDismissed = localStorage.getItem('lastDismissed');
@@ -16,6 +17,7 @@ window.onload = function() {
   showAlert();
   setTimeout(dismissAlert, 0);
 };
+*/
 
 // Shrink navbar on scroll
 window.onscroll = function() { scrollFunction(
