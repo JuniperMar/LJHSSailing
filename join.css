@@ -39,26 +39,24 @@
 }
 @media screen and (max-width: 950px) {
   .joinHeroImg {
-    background-position: 60% -20%;
-  }
-}
-@media screen and (max-width: 750px) {
-  .joinHeroImg {
-    background-position: 60% -50%;
-  }
-}
-@media screen and (max-width: 700px) {
-  .joinHeroImg {
-    background-position: 60% -100%;
+    background-position: 60% top;
   }
 }
 @media screen and (max-width: 600px) {
-  .joinHeroImg[background-image] {
-    zoom: 125%;
-  }
   .joinHeroImg {
-    height: 75vh;
-    object-fit: contain;
-    background-position: 60% -100%;
+    background-size: 125%;
+    background-position: 60% 0%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .joinHeroImg {
+    background-size: 150%;
+    background-position: 60% bottom;
+  }
+}
+@media screen and (max-width: 400px) {
+  .joinHeroImg {
+    background-size: 165%;
+    background-position: 60% bottom;
   }
 }
