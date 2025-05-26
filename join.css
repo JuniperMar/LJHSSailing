@@ -8,7 +8,8 @@
   height: 75vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0% 10%;
+  background-position: 0% 10%; /* which part of the image it shows, opposite of where it crops from*/
+  
 }
 
 .googleForm {
@@ -26,5 +27,38 @@
     max-width: 90%;
     box-shadow: 0 0 25px rgba(217, 32, 47, 0.3);
     transition: 0.3s ease-in-out; 
+  }
+}
+
+
+/* Mobile responsive contact image */
+@media screen and (max-width: 1200px) {
+  .joinHeroImg {
+    background-position: 60% 0%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .joinHeroImg {
+    background-position: 60% -20%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .joinHeroImg {
+    background-position: 60% -50%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .joinHeroImg {
+    background-position: 60% -100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .joinHeroImg[background-image] {
+    zoom: 125%;
+  }
+  .joinHeroImg {
+    height: 75vh;
+    object-fit: contain;
+    background-position: 60% -100%;
   }
 }

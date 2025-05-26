@@ -555,7 +555,7 @@ header {
     max-width: 400px; /*changes size of search box on the second decrease */
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   .nav .navOpenBtn,
   .nav .navCloseBtn {
     display: block;
