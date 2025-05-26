@@ -6,7 +6,7 @@
       rgba(0, 0, 0, 0.3)), 
     url("images/roster/groupPhoto2.JPG");
   height: 75vh;
-  background-size: 120%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 0% 10%; /* which part of the image it shows, opposite of where it crops from*/
   
