@@ -197,3 +197,15 @@ p {
   background-position: center;
   color: #fff;
 }
+
+/* Game controls styling */
+.gameControls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gameControls .button {
+  margin: 0;
+}

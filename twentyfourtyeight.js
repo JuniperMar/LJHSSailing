@@ -2,16 +2,54 @@ var board;
 var score = 0;
 var rows = 4;
 var columns = 4;
+var gameStarted = false;
 
 window.onload = function() {
+  initializeGame();
+}
+
+function initializeGame() {
+  setupGameControls();
+  setupBoard();
+}
+
+function setupGameControls() {
+  const startBtn = document.getElementById("startBtn");
+  const restartBtn = document.getElementById("restartBtn");
+  
+  startBtn.addEventListener("click", startGame);
+  restartBtn.addEventListener("click", restartGame);
+}
+
+function startGame() {
+  gameStarted = true;
+  document.getElementById("startBtn").style.display = "none";
+  document.getElementById("restartBtn").style.display = "inline-block";
   setGame();
+}
+
+function restartGame() {
+  score = 0;
+  document.getElementById("score").innerText = score;
+  document.getElementById("board").innerHTML = "";
+  setGame();
+}
+
+function setupBoard() {
+  // Create empty board display
+  for (let r=0; r<rows; r++) {
+    for (let c=0; c<columns; c++) {
+      let tile = document.createElement("div");
+      tile.id = r.toString() + "-" + c.toString();
+      tile.classList.add("tile");
+      document.getElementById("board").append(tile);
+    }
+  }
 }
 
 // defining my setGame() function
 function setGame() {
   // setting up the empty board
-
-  /* empty board */
   board = [
     [0, 0, 0, 0],
     [0, 0, 0, 0],
@@ -19,34 +57,12 @@ function setGame() {
     [0, 0, 0, 0]
   ]
 
-  /*
-  board = [
-    [2, 2, 2, 2],
-    [2, 2, 2, 2],
-    [4, 4, 8, 8],
-    [4, 4, 8, 8]
-  ]
-  */
-
-  /* Testing the board
-  board = [
-    [2, 4, 8, 16],
-    [32, 64, 128, 256],
-    [512, 1024, 2048, 4096],
-    [8192, 16384, 0, 0]
-  ]
-  */
-
   // iterate through each row and column
   for (let r=0; r<rows; r++) {
     for (let c=0; c<columns; c++) {
-      // creating a div with an id that labels its position on the board
-      let tile = document.createElement("div");
-      tile.id = r.toString() + "-" + c.toString();
+      let tile = document.getElementById(r.toString() + "-" + c.toString());
       let num = board[r][c];
       updateTile(tile, num);
-
-      document.getElementById("board").append(tile);
     }
   }
   addOpenSkiffTile();
@@ -150,24 +166,34 @@ function updateTile(tile, num) {
 
 // Moving the tiles around
 // Adding event listeners for the arrow keys
-document.addEventListener("keyup", (e) => {
-  if (e.code == "ArrowLeft") {
-    slideLeft();
-    addOpenSkiffTile();
+document.addEventListener("keydown", (e) => {
+  // Prevent default behavior for arrow keys to stop screen movement
+  if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.code)) {
+    e.preventDefault();
+    
+    // Only allow moves if game has started
+    if (!gameStarted) {
+      return;
+    }
+    
+    if (e.code == "ArrowLeft") {
+      slideLeft();
+      addOpenSkiffTile();
+    }
+    else if (e.code == "ArrowRight") {
+      slideRight();
+      addOpenSkiffTile();
+    }
+    else if (e.code == "ArrowUp") {
+      slideUp();
+      addOpenSkiffTile();
+    }
+    else if (e.code == "ArrowDown") {
+      slideDown();
+      addOpenSkiffTile();
+    }
+    document.getElementById("score").innerText = score;
   }
-  else if (e.code == "ArrowRight") {
-    slideRight();
-    addOpenSkiffTile();
-  }
-  else if (e.code == "ArrowUp") {
-    slideUp();
-    addOpenSkiffTile();
-  }
-  else if (e.code == "ArrowDown") {
-    slideDown();
-    addOpenSkiffTile();
-  }
-  document.getElementById("score").innerText = score;
 })
 
 function filterZeros(row) {

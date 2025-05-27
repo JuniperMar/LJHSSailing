@@ -45,6 +45,11 @@
         <h2 class="heading">Sailboat "2048"</h2>
         <!-- create the score tracker to populate with js -->
         <h3 class="bottomMargin">Score: <span id="score">0</span></h3> <!-- Note: span keeps it on the same line, unlike p -->
+        <!-- Game control buttons -->
+        <div class="gameControls bottomMargin">
+          <button id="startBtn" class="button centerButton">Start Game</button>
+          <button id="restartBtn" class="button centerButton" style="display: none;">Restart Game</button>
+        </div>
         <!-- create the board to populate with js -->
         <div id="board">
           <!-- Creating the different template sailboat tiles
