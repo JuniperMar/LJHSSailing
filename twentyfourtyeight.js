@@ -34,28 +34,25 @@ board = [
 */
 
 function setupGameControls() {
-  const startBtn = document.getElementById("startBtn");
-  const restartBtn = document.getElementById("restartBtn");
+  const startButton = document.getElementById("startButton");
+  const restartButton = document.getElementById("restartButton");
   
-  startBtn.addEventListener("click", startGame);
-  restartBtn.addEventListener("click", restartGame);
+  startButton.addEventListener("click", startGame);
+  restartButton.addEventListener("click", restartGame);
 }
 
 function startGame() {
   gameStarted = true;
-  document.getElementById("startBtn").style.display = "none";
-  document.getElementById("restartBtn").style.display = "inline-block";
+  document.getElementById("startButton").style.display = "none";
+  document.getElementById("restartButton").style.display = "inline-block";
   setGame();
 }
 
 function restartGame() {
-  gameStarted = false;
   score = 0;
   document.getElementById("score").innerText = score;
   document.getElementById("board").innerHTML = "";
-  document.getElementById("startBtn").style.display = "inline-block";
-  document.getElementById("restartBtn").style.display = "none";
-  setupBoard();
+  setGame();
 }
 
 function setupBoard() {
