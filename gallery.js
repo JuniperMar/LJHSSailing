@@ -48,3 +48,13 @@ function filterGallery() {
 
 eventFilter.addEventListener('change', filterGallery);
 yearFilter.addEventListener('change', filterGallery);
+
+// Fancybox customization
+Fancybox.bind("[data-fancybox='gallery']", {
+  Thumbs: {
+    autoStart: true,
+  },
+  Toolbar: {
+    display: ['zoom', 'fullscreen', 'thumbs', 'close'],
+  }
+});

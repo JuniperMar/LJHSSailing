@@ -10,6 +10,8 @@
   <link href="gallery.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <script src="https://kit.fontawesome.com/1b399f9bf4.js" crossorigin="anonymous"></script>
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
 </head>
 
 <body>
@@ -51,7 +53,9 @@
         <div class="gallery">
 
           <div class="galleryItem" data-event="roseBowl" data-year="202425">
-            <img src="images/sailingPhotos/cold.png" alt="Sailing in cold weather">
+            <a href="images/sailingPhotos/cold.png" data-fancybox="gallery" data-caption="Rose Bowl PCISA #3 | Maggie & Maddie | Jan 4-5, 2025">
+              <img src="images/sailingPhotos/cold.png" alt="Sailing in cold weather">
+            </a>
             <div class="overlay">
               <p class="caption">Rose Bowl PCISA #3</p>
               <p class="details">Maggie & Maddie | Jan 4-5, 2025</p>
@@ -59,7 +63,9 @@
           </div>
 
           <div class="galleryItem" data-event="roseBowl" data-year="202425">
-            <img src="images/sailingPhotos/launching.png" alt="Launching boats">
+            <a href="images/sailingPhotos/launching.png" data-fancybox="gallery" data-caption="Rose Bowl PCISA #3 | Jan 4-5, 2025">
+              <img src="images/sailingPhotos/launching.png" alt="Launching boats">
+            </a>
             <div class="overlay">
               <p class="caption">Rose Bowl PCISA #3</p>
               <p class="details">Jan 4-5, 2025</p>
@@ -67,7 +73,9 @@
           </div>
 
           <div class="galleryItem" data-event="roseBowl" data-year="202425">
-            <img src="images/sailingPhotos/start.png" alt="Race start">
+            <a href="images/sailingPhotos/start.png" data-fancybox="gallery" data-caption="Rose Bowl PCISA #3 | Malia & Owen | Jan 4-5, 2025">
+              <img src="images/sailingPhotos/start.png" alt="Race start">
+            </a>
             <div class="overlay">
               <p class="caption">Rose Bowl PCISA #3</p>
               <p class="details">Malia & Owen | Jan 4-5, 2025</p>
@@ -75,7 +83,9 @@
           </div>
 
           <div class="galleryItem" data-event="roseBowl" data-year="202425">
-            <img src="images/sailingPhotos/tillerSwap.png" alt="Tiller exchange">
+            <a href="images/sailingPhotos/tillerSwap.png" data-fancybox="gallery" data-caption="Rose Bowl PCISA #3 | Trevor & Katie | Jan 4-5, 2025">
+              <img src="images/sailingPhotos/tillerSwap.png" alt="Tiller swap">
+            </a>
             <div class="overlay">
               <p class="caption">Rose Bowl PCISA #3</p>
               <p class="details">Trevor & Katie | Jan 4-5, 2025</p>
@@ -83,7 +93,9 @@
           </div>
 
           <div class="galleryItem" data-event="roseBowl" data-year="202425">
-            <img src="images/sailingPhotos/vastDownwind.png" alt="Downwind sailing">
+            <a href="images/sailingPhotos/vastDownwind.png" data-fancybox="gallery" data-caption="Rose Bowl PCISA #3 | Trevor & Katie | Jan 4-5, 2025">
+              <img src="images/sailingPhotos/vastDownwind.png" alt="Downwind sailing">
+            </a>
             <div class="overlay">
               <p class="caption">Rose Bowl PCISA #3</p>
               <p class="details">Jan 4-5, 2025</p>
@@ -91,7 +103,9 @@
           </div>
 
           <div class="galleryItem" data-event="goldenBear" data-year="202425">
-            <img src="images/sailingPhotos/rotations.jpeg" alt="Downwind sailing">
+            <a href="images/sailingPhotos/rotations.jpeg" data-fancybox="gallery" data-caption="Rotations at Golden Bear PCISA #4 | Maggie & Trevor | February 22, 2025">
+              <img src="images/sailingPhotos/rotations.jpeg" alt="Rotations">
+            </a>
             <div class="overlay">
               <p class="caption">Golden Bear PCISA #4</p>
               <p class="details">Maggie & Trevor | February 22, 2025</p>
@@ -99,7 +113,9 @@
           </div>
 
           <div class="galleryItem" data-event="gaucho" data-year="202425">
-            <img src="images/sailingPhotos/rollTackNoWind.jpeg" alt="Downwind sailing">
+            <a href="images/sailingPhotos/rollTackNoWind.jpeg" data-fancybox="gallery" data-caption="Malia and Katie roll tacking in light wind while heading out to their first start of Gaucho PCISA #5 | March 8, 2025">
+              <img src="images/sailingPhotos/rollTackNoWind.jpeg" alt="Roll tack in light wind">
+            </a>
             <div class="overlay">
               <p class="caption">Gaucho PCISA #5</p>
               <p class="details">Malia & Katie | March 8, 2025</p>
@@ -117,5 +133,8 @@
   
   <script src="script.js"></script>
   <script src="gallery.js"></script>
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
 </body>
 </html>
