@@ -67,7 +67,7 @@ function startQuiz() {
 
 function showQuestion() {
   resetQuestion();
-  
+
   let currentQuestion = questions[currentQuestionIndex];
   let questionNum = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNum + ". " + currentQuestion.question;
