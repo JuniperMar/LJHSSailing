@@ -8,23 +8,43 @@ window.onload = function() {
   initializeGame();
 }
 
+// Set up the game for the user
+    // Have a start button so arrow keys are only used for game and screen doesn't shift arround
 function initializeGame() {
   setupGameControls();
   setupBoard();
 }
 
+/* Practice board
+board = [
+  [2, 2, 2, 2],
+  [2, 2, 2, 2],
+  [4, 4, 8, 8],
+  [4, 4, 8, 8]
+]
+*/
+
+/* Testing the board
+board = [
+  [2, 4, 8, 16],
+  [32, 64, 128, 256],
+  [512, 1024, 2048, 4096],
+  [8192, 16384, 0, 0]
+]
+*/
+
 function setupGameControls() {
-  const startBtn = document.getElementById("startBtn");
-  const restartBtn = document.getElementById("restartBtn");
+  const startButton = document.getElementById("startButton");
+  const restartButton = document.getElementById("restartButton");
   
-  startBtn.addEventListener("click", startGame);
-  restartBtn.addEventListener("click", restartGame);
+  startButton.addEventListener("click", startGame);
+  restartButton.addEventListener("click", restartGame);
 }
 
 function startGame() {
   gameStarted = true;
-  document.getElementById("startBtn").style.display = "none";
-  document.getElementById("restartBtn").style.display = "inline-block";
+  document.getElementById("startButton").style.display = "none";
+  document.getElementById("restartButton").style.display = "inline-block";
   setGame();
 }
 
@@ -39,6 +59,7 @@ function setupBoard() {
   // Create empty board display
   for (let r=0; r<rows; r++) {
     for (let c=0; c<columns; c++) {
+      // creating a div with an id that labels its position on the board
       let tile = document.createElement("div");
       tile.id = r.toString() + "-" + c.toString();
       tile.classList.add("tile");
@@ -60,6 +81,7 @@ function setGame() {
   // iterate through each row and column
   for (let r=0; r<rows; r++) {
     for (let c=0; c<columns; c++) {
+      
       let tile = document.getElementById(r.toString() + "-" + c.toString());
       let num = board[r][c];
       updateTile(tile, num);
@@ -270,6 +292,7 @@ function slideUp() {
     // board[3][c] = row[3];
 
     for (let r=0; r<rows; r++) {
+      
       board[r][c] = row[r];
       let tile = document.getElementById(r.toString() + "-" + c.toString());
       let num = board[r][c];

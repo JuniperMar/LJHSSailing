@@ -47,7 +47,4 @@ prev.addEventListener('click', function(){
 })
 
 // Update copyright year
-const currentYearElement = document.getElementById('currentYear');
-if (currentYearElement) {
-  currentYearElement.textContent = new Date().getFullYear();
-}
+document.getElementById('currentYear').textContent = new Date().getFullYear();
