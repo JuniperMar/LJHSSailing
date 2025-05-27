@@ -83,6 +83,7 @@ p {
 
 .nextButton {
   display: none;
+  margin-bottom: 0px;
 }
 
 .correct {
