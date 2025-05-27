@@ -52,7 +52,9 @@ function restartGame() {
   score = 0;
   document.getElementById("score").innerText = score;
   document.getElementById("board").innerHTML = "";
-  setGame();
+  setupBoard()
+  document.getElementById("startButton").style.display = "inline-block";
+  document.getElementById("restartButton").style.display = "none";
 }
 
 function setupBoard() {
