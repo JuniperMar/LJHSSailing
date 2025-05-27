@@ -40,6 +40,7 @@
   --clr-black: #000;
   --clr-white: #fff;
   --clr-grey: #808080;
+  --clr-dark-grey: #222;
 
   --ff-primary: "Poppins", sans-serif;
   --ff-title: "Open Sans", serif;
@@ -239,6 +240,14 @@ b {
 h3 {
   font-size: var(--fs-500);
   font-weight: var(--fw-bold);
+}
+
+.red {
+  color: var(--clr-accent-1);
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .smallLeftMargin {

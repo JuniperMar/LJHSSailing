@@ -1,0 +1,89 @@
+.triviaHeroImg {
+  width: 100%;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)), 
+    url("images/onLand/gauchosunset2.jpeg");
+  height: 75vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 98%; /* 2 val: hor ver */
+}
+
+body {
+  background: #f5f5f5;
+}
+
+p {
+  text-align: left;
+}
+
+/*
+.app {
+  background: var(--clr-white);
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto 0;
+  border-radius: 10px;
+  padding: 30px;
+}
+*/
+
+.quizContainer {
+  box-shadow: 0 0 50px rgba(217, 32, 47, 0.3);
+  background: var(--clr-white);
+  width: 90%;
+  max-width: 600px;
+  margin: 75px auto;
+  border-radius: 15px;
+  padding: 30px;
+} 
+
+.quizContainer h3 {
+  border-bottom: 1px solid var(--clr-black);
+  padding-bottom: 20px;
+  font-size: var(--fs-575);
+  color: var(--clr-accent-1);
+}
+
+.quiz {
+  padding-top: 20px;
+}
+
+.question {
+  font-size: var(--fs-450);
+  font-weight: var(--fw-bold);
+  color: var(--clr-accent-1);
+}
+
+
+.quizButton {
+  background: var(--clr-white);
+  color: var(--clr-dark-grey);
+  font-weight: var(--fw-semi-bold);
+  width: 100%;
+  border: 1px solid var(--clr-grey);
+  padding: 10px;
+  margin-top: 20px;
+  text-align: left;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quizButton:hover {
+  background: var(--clr-dark-grey);
+  color: var(--clr-white);
+  border-color: var(--clr-dark-grey);
+}
+
+.quizButton:focus {
+  outline: none;
+  border-color: var(--clr-accent-2);
+  box-shadow: 0 0 5px #222(217, 32, 47, 0.3);
+}
+
+.nextButton {
+  display: none;
+}
