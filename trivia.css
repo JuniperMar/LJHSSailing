@@ -72,18 +72,28 @@ p {
   transition: all 0.3s ease;
 }
 
-.quizButton:hover {
+.quizButton:hover:not([disabled]) {
   background: var(--clr-dark-grey);
   color: var(--clr-white);
   border-color: var(--clr-dark-grey);
 }
-
-.quizButton:focus {
-  outline: none;
-  border-color: var(--clr-accent-2);
-  box-shadow: 0 0 5px #222(217, 32, 47, 0.3);
+.quizButton:disabled {
+  cursor: no-drop;
 }
 
 .nextButton {
   display: none;
+}
+
+.correct {
+  background: #dafeea;
+  border-color: #01d260;
+  box-shadow: 0 0 5px rgba(0, 154, 70, 0.4);
+  
+}
+
+.incorrect {
+  background: var(--clr-accent-4);
+  border-color: var(--clr-accent-2);
+  box-shadow: 0 0 5px rgba(217, 32, 47, 0.4);
 }
