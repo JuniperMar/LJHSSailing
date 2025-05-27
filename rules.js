@@ -1,6 +1,7 @@
 // Creating the array of questions and the corresponding answers
 const questions = [
   { question: "Sailing is an Olympic sport. When was the first time it was included on the Olympic program?",
+    image: "images/sailingPhotos/start.png",
     answers: [
       {text: "1896", correct: true},
       {text: "1900", correct: false},
@@ -8,6 +9,7 @@ const questions = [
       {text: "1904", correct: false}
     ]},
   { question: "On May 15, 2010, who became the youngest person to circumnavigate the globe solo and unassisted sailing?",
+    image: "images/sailingPhotos/vastDownwind.png",
     answers: [
       {text: "John Anedrson", correct: false},
       {text: "Amelia Johnson", correct: false},
@@ -15,6 +17,7 @@ const questions = [
       {text: "Jackie Miller", correct: false}
     ]},
   { question: "How many nautical miles did Jessica Watson sail during her circumnavigation?",
+    image: "images/sailingPhotos/downwindFocused.png",
     answers: [
       {text: "19,000", correct: false},
       {text: "23,000", correct: true},
@@ -22,6 +25,7 @@ const questions = [
       {text: "31,000", correct: false}
     ]},
   { question: "How long did Jessica Watson's circumnavigation take?",
+    image: "images/sailingPhotos/jibe.png",
     answers: [
       {text: "180 days", correct: false},
       {text: "200 days", correct: false},
@@ -29,6 +33,7 @@ const questions = [
       {text: "250 days", correct: false}
     ]},
   { question: "Ben Ainslie won five Olympic medals in sailing, four gold and one silver before announcing his retirement in 2013. What country is he from?",
+    image: "images/sailingPhotos/preStart.png",
     answers: [
       {text: "The United States", correct: false},
       {text: "Australia", correct: false},
@@ -36,6 +41,7 @@ const questions = [
       {text: "Great Britain", correct: true}
     ]},
   { question: "How long is an a Flying Junior (FJ) sailboat?",
+    image: "images/sailboats/fj.png",
     answers: [
       {text: "12 feet 2 inches", correct: false},
       {text: "13 feet 3 inches ", correct: true},
@@ -43,6 +49,7 @@ const questions = [
       {text: "15 feet 5 inches", correct: false}
     ]},
   { question: "What is the name of the two pieces of metal and fiberglass on a 420 sailboat that surrounds and supports the mast?",
+    image: "images/sailboats/420.png",
     answers: [
       {text: "Parchers", correct: false},
       {text: "Packers", correct: false},
@@ -71,6 +78,15 @@ function showQuestion() {
   let currentQuestion = questions[currentQuestionIndex];
   let questionNum = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNum + ". " + currentQuestion.question;
+
+  // Add image if it exists
+  if (currentQuestion.image) {
+    const imageElement = document.createElement("img");
+    imageElement.src = currentQuestion.image;
+    imageElement.classList.add("questionImage");
+    imageElement.alt = "Question " + questionNum + " image";
+    questionElement.appendChild(imageElement);
+  }
 
   currentQuestion.answers.forEach(answer => {
     const button = document.createElement("button");
