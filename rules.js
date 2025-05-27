@@ -1,60 +1,58 @@
 // Creating the array of questions and the corresponding answers
 const questions = [
-  { question: "Sailing is an Olympic sport. When was the first time it was included on the Olympic program?",
-    image: "images/sailingPhotos/start.png",
+  { question: "Who has the right-of-way?",
+    image: "images/rules/portstarboard.png",
     answers: [
-      {text: "1896", correct: true},
-      {text: "1900", correct: false},
-      {text: "1892", correct: false},
-      {text: "1904", correct: false}
+      {text: "Boat A", correct: false},
+      {text: "Boat B", correct: true}
     ]},
-  { question: "On May 15, 2010, who became the youngest person to circumnavigate the globe solo and unassisted sailing?",
-    image: "images/sailingPhotos/vastDownwind.png",
+  { question: "Does Franklin or Lucy have the right-of way?",
+    image: "images/rules/sailing-rules-different-legs.jpg",
     answers: [
-      {text: "John Anedrson", correct: false},
-      {text: "Amelia Johnson", correct: false},
-      {text: "Jessica Watson", correct: true},
-      {text: "Jackie Miller", correct: false}
+      {text: "Lucy", correct: true},
+      {text: "Franklin", correct: false}
     ]},
-  { question: "How many nautical miles did Jessica Watson sail during her circumnavigation?",
-    image: "images/sailingPhotos/downwindFocused.png",
+  { question: "Assuming Franklin established overlap before entering the 3-boat-length circle, must Lucy give room to Franklin?",
+    image: "images/rules/sailing-rules-different-legs.jpg",
     answers: [
-      {text: "19,000", correct: false},
-      {text: "23,000", correct: true},
-      {text: "27,000", correct: false},
-      {text: "31,000", correct: false}
+      {text: "Yes", correct: true},
+      {text: "No", correct: false}
     ]},
-  { question: "How long did Jessica Watson's circumnavigation take?",
-    image: "images/sailingPhotos/jibe.png",
+  { question: "If on a coliding course, does Lucy or Snoopy have the right-of-way?",
+    image: "images/rules/sailing-rules-different-legs.jpg",
     answers: [
-      {text: "180 days", correct: false},
-      {text: "200 days", correct: false},
-      {text: "210 days", correct: true},
-      {text: "250 days", correct: false}
+      {text: "Lucy", correct: false},
+      {text: "Snoopy", correct: true}
     ]},
-  { question: "Ben Ainslie won five Olympic medals in sailing, four gold and one silver before announcing his retirement in 2013. What country is he from?",
-    image: "images/sailingPhotos/preStart.png",
+  { question: "Was Charlie required to avoid Sally?",
+    image: "images/rules/sailing-rules-different-legs.jpg",
     answers: [
-      {text: "The United States", correct: false},
-      {text: "Australia", correct: false},
-      {text: "Germany", correct: false},
-      {text: "Great Britain", correct: true}
+      {text: "Yes", correct: true},
+      {text: "No", correct: false}
     ]},
-  { question: "How long is an a Flying Junior (FJ) sailboat?",
-    image: "images/sailboats/fj.png",
+  { question: "If on a coliding course, does Sally or Peppermint Patty have the right-of-way?",
+    image: "images/rules/sailing-rules-different-legs.jpg",
     answers: [
-      {text: "12 feet 2 inches", correct: false},
-      {text: "13 feet 3 inches ", correct: true},
-      {text: "14 feet 4 inches", correct: false},
-      {text: "15 feet 5 inches", correct: false}
+      {text: "Sally", correct: true},
+      {text: "Peppermint Patty", correct: false}
     ]},
-  { question: "What is the name of the two pieces of metal and fiberglass on a 420 sailboat that surrounds and supports the mast?",
-    image: "images/sailboats/420.png",
+  { question: "Must Mary change course or can she continue sailing on starboard at her current angle?",
+    image: "images/rules/finishroom.jpg",
     answers: [
-      {text: "Parchers", correct: false},
-      {text: "Packers", correct: false},
-      {text: "Supporters", correct: false},
-      {text: "Partners", correct: true}
+      {text: "Yes", correct: true},
+      {text: "No", correct: false}
+    ]},
+  { question: "Who must avoid the other?",
+    image: "images/rules/finishroom.jpg",
+    answers: [
+      {text: "Peter", correct: false},
+      {text: "Paul", correct: true}
+    ]},
+  { question: "Who has the right-of-way?",
+    image: "images/rules/windwardleeward.jpg",
+    answers: [
+      {text: "Boat A", correct: false},
+      {text: "Boat B", correct: true}
     ]}
 ];
 
