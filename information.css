@@ -26,3 +26,9 @@ ul li {
 p {
   text-align: left;
 }
+
+.centeredButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
