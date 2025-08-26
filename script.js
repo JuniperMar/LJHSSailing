@@ -48,3 +48,17 @@ prev.addEventListener('click', function(){
 
 // Update copyright year
 document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Toggle announcements dropdown
+function toggleAnnouncements() {
+  const content = document.getElementById('announcements-content');
+  const button = document.querySelector('.dropdown-toggle');
+  
+  if (content.classList.contains('show')) {
+    content.classList.remove('show');
+    button.textContent = 'Learn More';
+  } else {
+    content.classList.add('show');
+    button.textContent = 'Show Less';
+  }
+}

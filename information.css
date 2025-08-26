@@ -32,3 +32,17 @@ p {
   justify-content: center;
   align-items: center;
 }
+
+.dropdown-content {
+  display: none;
+  margin-top: 20px;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-toggle {
+  margin: 20px auto;
+  display: block;
+}
