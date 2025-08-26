@@ -86,6 +86,31 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .specialRosterContainer .flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .coach {
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    margin: 20px auto 0 auto;
+    order: 2;
+  }
+  
+  .rosterText {
+    max-width: 100%;
+    order: 1;
+  }
+  
+  .ucsbLogo {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
 h3 {
   font-size: var(--fs-500);
   font-weight: var(--fw-bold);
