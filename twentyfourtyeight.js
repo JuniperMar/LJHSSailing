@@ -324,3 +324,19 @@ function slideDown() {
     }
   }
 }
+
+// Function to show the overlay
+function showGameOverlay() {
+  const overlay = document.getElementById('game-overlay');
+  overlay.classList.remove('hidden');
+}
+
+// Example: Call this function when the game ends
+// You can integrate this with your existing game logic
+function onGameEnd() {
+  showGameOverlay();
+}
+
+// Example trigger for testing
+// Uncomment the line below to test the overlay
+//
