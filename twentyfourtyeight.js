@@ -38,7 +38,8 @@ function setupGameControls() {
   const restartButton = document.getElementById("restartButton");
   
   startButton.addEventListener("click", startGame);
-  restartButton.addEventListener("click", restartGame);
+  restartButton.addEventListener("click", finishGame);
+  hideButton.addEventListener("click", hideGameOverlay);
 }
 
 function startGame() {
@@ -48,7 +49,12 @@ function startGame() {
   setGame();
 }
 
+function finishGame() {
+  onGameEnd();
+}
+
 function restartGame() {
+  currentScore = score;
   score = 0;
   document.getElementById("score").innerText = score;
   document.getElementById("board").innerHTML = "";
@@ -327,8 +333,20 @@ function slideDown() {
 
 // Function to show the overlay
 function showGameOverlay() {
-  const overlay = document.getElementById('game-overlay');
+  const overlay = document.getElementById('gameOverlay');
   overlay.classList.remove('hidden');
+  overlay.classList.add('show');
+
+  const finalScoreElement = document.getElementById('finalScore');
+  finalScoreElement.textContent = currentScore;
+}
+
+// hideButton
+function hideGameOverlay() {
+  const overlay = document.getElementById('gameOverlay');
+  overlay.classList.remove('show');
+  overlay.classList.add('hidden');
+  restartGame();
 }
 
 // Example: Call this function when the game ends
@@ -339,4 +357,4 @@ function onGameEnd() {
 
 // Example trigger for testing
 // Uncomment the line below to test the overlay
-//
+// onGameEnd();

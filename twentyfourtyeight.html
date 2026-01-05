@@ -34,6 +34,7 @@
 
     <div class="container">
       <div class="bottomMargin">
+        <p>Note: This game can only be played in the desktop, not mobile view, unfortunately.</p>
         <h2 class="heading">One-Design Sailboat Fleets</h2>
         <h3>Flying Junior (FJ)</h3>
         <p>FJs are a double-handed sailboat used in high school and collegiate sailing in the US. Originally, FJs were designed as a training boat for the Flying Dutchman Olympic class. Fjs are 13 ft. 3 in. long and are very maneuverable and fun sailboats.</p>
@@ -49,18 +50,19 @@
         <!-- Game control buttons -->
         <div class="gameControls bottomMargin">
           <button id="startButton" class="button centerButton">Start Game</button>
-          <button id="restartButton" class="button centerButton" style="display: none;">Restart Game</button>
+          <button id="restartButton" class="button centerButton" style="display: none;">Finish Game</button>
         </div>
         <!-- create the board to populate with js -->
         <div id="board">
           <!-- Game tiles will be here -->
         </div>
 
-        <div id="gameOverlay" class="hidden">
+        <div id="gameOverlay" class="show">
           <div class="overlayContent">
-            <h3>Great job!</h3>
-            <h2 class="bottomMargin">Your final score was <span id="score">0</span>!</h2>
-            <p>If this was your first time playing the Sailing 2048 game, and you are a PCSIA affiliated sailor (including my teammates!) who will ever see the LJHS Sailing Team, you have won yourself a chocolate piece or some equivalent small token of appreciation for visiting this site. Thanks!</p>
+            <h3 class="bottomMargin">Great job!</h3>
+            <!--  <p class="bottomMargin centered">Your final score was <span id="finalScore">0</span>!</p> -->
+            <p class="">If this was your first time playing the Sailing 2048 game, and you are a PCSIA affiliated sailor (including my teammates!) who will ever see the LJHS Sailing Team, you have won yourself a chocolate piece or some equivalent small token of appreciation for visiting this site. Thanks!</p>
+            <button id="hideButton" class="button centerButton" style="margin-bottom:0;" >Hide</button>
           </div>
         </div>
         
