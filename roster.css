@@ -24,6 +24,7 @@
 }
 
 .rosterContainer .card {
+
   position: relative;
   flex-basis: 22.5%;
   min-width: 300px;
@@ -65,7 +66,7 @@
   text-align: left;
   visibility: hidden;
   opacity: 0;
-  transition: 0.3s ease-in-out; 
+  transition: 0.3s ease-in-out;
 }
 
 .rosterContainer .card:hover .content {
