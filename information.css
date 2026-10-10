@@ -27,6 +27,10 @@ p {
   text-align: left;
 }
 
+h4 {
+  font-style: italic;
+}
+
 .centeredButtons {
   display: flex;
   justify-content: center;
